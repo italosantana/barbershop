@@ -18,8 +18,7 @@ export default function Home() {
             flexDirection: "column",
             alignItems: "center",
             height: "100vh",
-            maxWidth: "1200px",
-            width: "100%",
+            width: "100vw",
             backgroundColor: theme.palette.secondary.main,
           }}
         >
@@ -42,7 +41,7 @@ export default function Home() {
               width: "100%",
               [theme.breakpoints.down('tablet')]: {
                 flexWrap: "wrap",
-                button: {
+                a: {
                   mt: 2,
                 }
               }
