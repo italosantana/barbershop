@@ -24,6 +24,9 @@ pnpm dev
 - typescript
 - materialUI
 
+## Color palette
+![image](https://user-images.githubusercontent.com/48260257/231293651-dcf3af7a-ed04-4a80-a347-c923bfa927f0.png)
+
 
 ## How to use
 Barber needs to have an account to provide some information about your business.
