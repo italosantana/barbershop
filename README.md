@@ -22,4 +22,4 @@ pnpm dev
 - graphql
 - nextjs
 - typescript
-
+- materialUI
