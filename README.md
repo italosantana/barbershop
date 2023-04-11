@@ -1,7 +1,7 @@
-<p align="center"><img width='270px' src="/logo.png" /></p>
+<p align="center"><img width='270px' src="https://github.com/italosantana/barbershop/blob/main/public/logo.png" /></p>
+<p align="center">A simple solution for scheduling your barber shop.</p>
 
 
-A simple solution for scheduling your barber shop.
 
 
 ## Getting Started
