@@ -5,6 +5,7 @@ import React from 'react'
 import Image from 'next/image';
 import { Box, CssBaseline, Typography } from '@mui/material';
 import theme from '@/styles/theme';
+import { Logo } from './components/Logo';
 
 export default function Home() {
   return (
@@ -22,7 +23,7 @@ export default function Home() {
             backgroundColor: theme.palette.secondary.main,
           }}
         >
-          <Image src={'/logo.png'} alt="logo barbershop business" width={220} height={220} />
+          <Logo/>
           <Typography
             sx={{
               color: theme.palette.primary.light,
@@ -48,8 +49,8 @@ export default function Home() {
             }}
           >
 
-            <CustomButton>Acesse sua conta</CustomButton>
-            <CustomButton>Registre sua conta</CustomButton>
+            <CustomButton href='/login'>Acesse sua conta</CustomButton>
+            <CustomButton href='/register'>Registre sua conta</CustomButton>
           </Box>
         </Box>
     </React.Fragment >
