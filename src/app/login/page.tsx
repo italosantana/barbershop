@@ -1,0 +1,21 @@
+"use client";
+
+import { Container, CssBaseline } from '@mui/material'
+import Head from 'next/head'
+import { LoginSection } from '../components/Login'
+import React from 'react'
+import theme from '@/styles/theme';
+
+export default function Page() {
+    return (
+        <React.Fragment>
+            <Head>
+                <title>Login</title>
+            </Head>
+            <CssBaseline />
+            <Container maxWidth="lg" sx={{ backgroundColor: theme.palette.secondary.main, }}>
+                <LoginSection />
+            </Container>
+        </React.Fragment>
+    )
+}
