@@ -2,20 +2,19 @@
 
 import { Container, CssBaseline } from '@mui/material'
 import Head from 'next/head'
-import { LoginSection } from '../components/Login'
 import React from 'react'
 import theme from '@/styles/theme';
+import { RegisterSection } from '../components/Register';
 
 export default function Page() {
     return (
         <React.Fragment>
             <Head>
-                <title>Login</title>
-                <meta property="og:title" content="Login page | Barbershop" key="title" />
+                <title>Register</title>
             </Head>
             <CssBaseline />
             <Container maxWidth="lg" sx={{ backgroundColor: theme.palette.secondary.main, }}>
-                <LoginSection />
+                <RegisterSection />
             </Container>
         </React.Fragment>
     )
