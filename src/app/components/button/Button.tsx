@@ -3,13 +3,15 @@ import { Button } from "@mui/material"
 
 type Props = {
     onClick?: (e?: any) => void;
+    href?: string;
     children?: React.ReactNode;
     sx?: any;
 }
 
-export const CustomButton = ({ children, sx, onClick }: Props) => {
+export const CustomButton = ({ children, href, sx, onClick }: Props) => {
     return (
         <Button
+            href={href}
             onClick={onClick}
             sx={{
                 color: '#5C5A4E',
