@@ -1,0 +1,7 @@
+build
+dist
+.env
+.env.production
+.env.backup
+node_modules
+yarn.lock

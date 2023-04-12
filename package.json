@@ -5,7 +5,7 @@
     "scripts": {
         "dev:app": "yarn workspace @barbershop/web dev",
         "build": "yarn workspace @barbershop/web build",
-        "start": "yarn workspace @barbershop/web start",
+        "start:server": "yarn workspace @barbershop/server start",
         "lint": "yarn workspace @barbershop/web lint"
     },
     "workspaces": {
