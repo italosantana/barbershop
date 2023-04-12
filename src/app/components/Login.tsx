@@ -1,7 +1,7 @@
 "use client";
 
 import { Box, Input, Typography } from "@mui/material"
-import { CustomButton } from "../components/button/Button"
+import { CustomButton } from "./button/Button"
 import theme from "@/styles/theme"
 import Image from "next/image";
 

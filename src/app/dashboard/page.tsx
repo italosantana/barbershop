@@ -4,7 +4,7 @@ import { Container, CssBaseline } from '@mui/material'
 import Head from 'next/head'
 import React from 'react'
 import theme from '@/styles/theme';
-import { DashboardSection } from './Dashboard';
+import { DashboardSection } from '../components/Dashboard';
 
 export default function Page() {
     return (

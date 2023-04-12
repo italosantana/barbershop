@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material"
 import { RequestCard } from "./RequestsCard"
-import { Logo } from "../components/Logo"
+import { Logo } from "./Logo"
 import theme from "@/styles/theme"
 
 

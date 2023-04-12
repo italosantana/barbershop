@@ -4,7 +4,7 @@ import { Container, CssBaseline } from '@mui/material'
 import Head from 'next/head'
 import React from 'react'
 import theme from '@/styles/theme';
-import { RegisterSection } from './Register';
+import { RegisterSection } from '../components/Register';
 
 export default function Page() {
     return (

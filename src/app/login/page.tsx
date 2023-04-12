@@ -2,7 +2,7 @@
 
 import { Container, CssBaseline } from '@mui/material'
 import Head from 'next/head'
-import { LoginSection } from './Login'
+import { LoginSection } from '../components/Login'
 import React from 'react'
 import theme from '@/styles/theme';
 
