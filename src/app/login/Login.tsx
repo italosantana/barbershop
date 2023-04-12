@@ -1,11 +1,11 @@
 "use client";
 
 import { Box, Input, Typography } from "@mui/material"
-import { CustomButton } from "./button/Button"
+import { CustomButton } from "../components/button/Button"
 import theme from "@/styles/theme"
-import { Logo } from "./Logo";
+import Image from "next/image";
 
-export const RegisterSection = () => {
+export const LoginSection = () => {
     return (
         <Box
             sx={{
@@ -18,12 +18,13 @@ export const RegisterSection = () => {
                 backgroundColor: theme.palette.secondary.main,
             }}
         >
-            <Logo />
+
+            <Image src={'/logo.png'} alt="logo barbershop business" width={220} height={220} />
             <Box
                 sx={{
                     border: "1px solid #FFF",
                     borderRadius: "16px",
-                    height: "60%",
+                    height: "320px",
                     width: "100%",
                     maxWidth: "391px",
                     justifyContent: "center",
@@ -50,7 +51,7 @@ export const RegisterSection = () => {
                         textAlign: "center",
                         m: '19px',
                     }}
-                >Criar sua conta</Typography>
+                >Acessar sua conta</Typography>
 
                 <Box
                     sx={{
@@ -73,39 +74,7 @@ export const RegisterSection = () => {
                             }
                         }}
                         disableUnderline
-                        placeholder="Nome da barbearia"
-                    />
-                    <Input
-                        sx={{
-                            border: '1px solid #FFF',
-                            borderRadius: 1,
-                            mt: '27px',
-                            color: '#8D8D99',
-                            height: "56px",
-                            width: "327px",
-                            pl: "27px",
-                            [theme.breakpoints.down('mobile')]: {
-                                maxWidth: "70vw"
-                            }
-                        }}
-                        disableUnderline
-                        placeholder="Senha"
-                    />
-                    <Input
-                        sx={{
-                            border: '1px solid #FFF',
-                            borderRadius: 1,
-                            mt: '27px',
-                            color: '#8D8D99',
-                            height: "56px",
-                            width: "327px",
-                            pl: "27px",
-                            [theme.breakpoints.down('mobile')]: {
-                                maxWidth: "70vw"
-                            }
-                        }}
-                        disableUnderline
-                        placeholder="Email"
+                        placeholder="Digite seu email"
                     />
                     <Input
                         sx={{
@@ -122,7 +91,7 @@ export const RegisterSection = () => {
                             }
                         }}
                         disableUnderline
-                        placeholder="Whatsapp"
+                        placeholder="Digite sua senha"
                     />
                 </Box>
                 <CustomButton sx={{ maxWidth: "327px", width: "100%" }}>ACESSAR</CustomButton>
