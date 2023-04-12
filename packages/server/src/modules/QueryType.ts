@@ -1,7 +1,6 @@
 import { GraphQLObjectType } from "graphql";
 
 import { nodesField, nodeField } from "../node/typeRegister";
-import { userConnectionField } from "../user/UserField";
 
 const QueryType = new GraphQLObjectType({
   name: "Query",
@@ -9,7 +8,6 @@ const QueryType = new GraphQLObjectType({
   fields: () => ({
     node: nodeField,
     nodes: nodesField,
-    ...userConnectionField(),
   }),
 });
 
