@@ -8,8 +8,10 @@
     "build": "rm -rf dist/* && babel src --extensions \".es6,.js,.es,.jsx,.mjs,.ts,.tsx\" --ignore *.spec.js --out-dir dist --copy-files --source-maps --verbose"
   },
   "dependencies": {
+    "@entria/graphql-mongo-helpers": "^1.1.2",
     "@koa/cors": "^4.0.0",
     "@types/koa-bodyparser": "^4.3.10",
+    "bcryptjs": "^2.4.3",
     "dotenv-safe": "^8.2.0",
     "graphql": "^16.6.0",
     "graphql-playground-middleware-koa": "^1.6.22",
@@ -22,6 +24,7 @@
     "mongoose": "^7.0.3"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
     "@types/dotenv-safe": "^8.1.2",
     "@types/jsonwebtoken": "^9.0.1",
     "@types/koa-graphql": "^0.8.7",
