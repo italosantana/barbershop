@@ -1,9 +1,9 @@
 "use client";
 
 import { Box, Input, Typography } from "@mui/material"
-import { CustomButton } from "./button/Button"
+import { CustomButton } from "../components/button/Button"
 import theme from "@/styles/theme"
-import { Logo } from "./Logo";
+import { Logo } from "../components/Logo";
 
 export const RegisterSection = () => {
     return (

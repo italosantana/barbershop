@@ -47,7 +47,6 @@ export default function Home() {
               }
             }}
           >
-
             <CustomButton href='/login'>Acesse sua conta</CustomButton>
             <CustomButton href='/register'>Registre sua conta</CustomButton>
           </Box>
