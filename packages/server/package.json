@@ -13,6 +13,7 @@
     "dotenv-safe": "^8.2.0",
     "graphql": "^16.6.0",
     "graphql-playground-middleware-koa": "^1.6.22",
+    "graphql-relay": "^0.10.0",
     "koa": "^2.14.2",
     "koa-bodyparser": "^4.4.0",
     "koa-graphql": "^0.12.0",
