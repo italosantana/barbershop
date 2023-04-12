@@ -11,7 +11,9 @@
     "@koa/cors": "^4.0.0",
     "@types/koa-bodyparser": "^4.3.10",
     "dotenv-safe": "^8.2.0",
+    "graphql": "^16.6.0",
     "graphql-playground-middleware-koa": "^1.6.22",
+    "koa": "^2.14.2",
     "koa-bodyparser": "^4.4.0",
     "koa-graphql": "^0.12.0",
     "koa-router": "^12.0.0",
@@ -19,6 +21,7 @@
   },
   "devDependencies": {
     "@types/dotenv-safe": "^8.1.2",
+    "@types/koa-graphql": "^0.8.7",
     "@types/koa-router": "^7.4.4",
     "@types/koa__cors": "^4.0.0",
     "@types/webpack-node-externals": "^3.0.0",
