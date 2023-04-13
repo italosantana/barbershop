@@ -5,6 +5,8 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack --watch --progress --config webpack.config.js",
+    "es": "node -r esbuild-register",
+    "update-schema": "yarn es ./scripts/updateSchema.ts",
     "build": "rm -rf dist/* && babel src --extensions \".es6,.js,.es,.jsx,.mjs,.ts,.tsx\" --ignore *.spec.js --out-dir dist --copy-files --source-maps --verbose"
   },
   "dependencies": {
@@ -12,6 +14,7 @@
     "@koa/cors": "^4.0.0",
     "@types/koa-bodyparser": "^4.3.10",
     "bcryptjs": "^2.4.3",
+    "dataloader": "^2.2.2",
     "dotenv-safe": "^8.2.0",
     "graphql": "^16.6.0",
     "graphql-playground-middleware-koa": "^1.6.22",
@@ -32,6 +35,8 @@
     "@types/koa__cors": "^4.0.0",
     "@types/webpack-node-externals": "^3.0.0",
     "babel-loader": "^9.1.2",
+    "esbuild": "^0.17.16",
+    "esbuild-register": "^3.4.2",
     "reload-server-webpack-plugin": "^1.0.1",
     "webpack": "^5.79.0",
     "webpack-cli": "^5.0.1",
