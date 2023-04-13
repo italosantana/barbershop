@@ -3,6 +3,7 @@
 .vscode/
 tmp/
 *.log
+.next
 
 **/node_modules/
 build/
