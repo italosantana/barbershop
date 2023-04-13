@@ -1,6 +1,7 @@
 import { Types } from 'mongoose';
 
 export type DataLoaderKey = Types.ObjectId | string | undefined | null;
+
 export interface DataLoaders {
   UserLoader: ReturnType<typeof import('../modules/user/UserLoader').getLoader>;
 }

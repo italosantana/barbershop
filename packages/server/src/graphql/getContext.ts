@@ -5,14 +5,14 @@ import { getDataloaders } from '../loader/loaderRegister';
 import { GraphQLContext } from './types';
 
 type ContextVars = {
-    req?: Request;
+  req?: Request;
 };
 
 export const getContext = async (ctx: ContextVars) => {
-    const dataloaders = getDataloaders();
+  const dataloaders = getDataloaders();
 
-    return {
-        req: ctx.req,
-        dataloaders,
-    } as GraphQLContext;
+  return {
+    req: ctx.req,
+    dataloaders,
+  } as GraphQLContext;
 };
