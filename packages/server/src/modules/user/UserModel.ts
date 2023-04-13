@@ -5,6 +5,7 @@ export interface User {
     name: string;
     email: string;
     password: string;
+    whatsapp: string;
 }
 
 export interface UserDocument extends User, Document {
@@ -26,6 +27,9 @@ const UserSchema = new Schema(
             required: true,
             unique: true,
         },
+        whatsapp: {
+            type: String,
+        }
     },
     {
         timestamps: {
