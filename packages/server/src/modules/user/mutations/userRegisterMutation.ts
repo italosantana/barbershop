@@ -5,7 +5,6 @@ import { errorField, successField } from '@entria/graphql-mongo-helpers';
 
 import { UserType } from '../UserType';
 
-import { getUser } from '../../../auth';
 import { UserModel } from '../UserModel';
 
 
@@ -23,23 +22,22 @@ export default mutationWithClientMutationId({
 
         if (hasEmail) {
             return {
-                error: 'This email has been registered',
-            };
+                error: "This email has been registered"
+            }
         }
 
         const user = new UserModel({
-            ...rest,
+            name,
             email,
+            password,
+            whatsapp,
         });
 
         await user.save();
 
-        const token = getUser(user._id);
-
         return {
             id: user._id,
-            success: 'Congratulations! The user has registered with success!',
-            token,
+            success: 'User has registered with success!',
         };
     },
     outputFields: {

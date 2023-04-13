@@ -3,13 +3,13 @@ import { graphqlHTTP, OptionsData } from 'koa-graphql';
 import Router from 'koa-router';
 import cors from '@koa/cors';
 import bodyParser from 'koa-bodyparser';
-import { schema } from './modules/schema';
 
 import koaPlayground from 'graphql-playground-middleware-koa';
 
 import { getUser } from './auth';
 import { getContext } from './graphql/getContext';
 import { config } from './config';
+import { schema } from './schema/schema';
 
 const app = new Koa();
 const router = new Router();
