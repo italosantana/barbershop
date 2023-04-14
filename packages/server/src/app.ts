@@ -15,50 +15,50 @@ const app = new Koa();
 const router = new Router();
 
 const graphQlSettingsPerReq = async (req: Request): Promise<OptionsData> => {
-    const user = await getUser(req.header.authorization);
+  const user = await getUser(req.header.authorization);
 
-    return {
-        graphiql:
-            config.NODE_ENV !== 'production'
-                ? {
-                    headerEditorEnabled: true,
-                    shouldPersistHeaders: true,
-                }
-                : false,
-        schema,
-        pretty: true,
-        context: getContext({
-            user,
-        }),
-        customFormatErrorFn: ({ message, locations, stack }) => {
-            /* eslint-disable no-console */
-            console.log(message);
-            console.log(locations);
-            console.log(stack);
-            /* eslint-enable no-console */
+  return {
+    graphiql:
+      config.NODE_ENV !== 'production'
+        ? {
+            headerEditorEnabled: true,
+            shouldPersistHeaders: true,
+          }
+        : false,
+    schema,
+    pretty: true,
+    context: getContext({
+      user,
+    }),
+    customFormatErrorFn: ({ message, locations, stack }) => {
+      /* eslint-disable no-console */
+      console.log(message);
+      console.log(locations);
+      console.log(stack);
+      /* eslint-enable no-console */
 
-            return {
-                message,
-                locations,
-                stack,
-            };
-        },
-    };
+      return {
+        message,
+        locations,
+        stack,
+      };
+    },
+  };
 };
 
 const graphqlServer = graphqlHTTP(graphQlSettingsPerReq);
 
-router.get('/', async ctx => {
-    ctx.body = 'Ok';
+router.get('/', async (ctx) => {
+  ctx.body = 'Ok';
 });
 
 router.all('/graphql', graphqlServer);
 
 router.all(
-    '/playground',
-    koaPlayground({
-        endpoint: '/graphql',
-    }),
+  '/playground',
+  koaPlayground({
+    endpoint: '/graphql',
+  }),
 );
 
 app.use(bodyParser());

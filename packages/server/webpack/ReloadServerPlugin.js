@@ -1,8 +1,8 @@
-const cluster = require("cluster");
-const path = require("path");
+const cluster = require('cluster');
+const path = require('path');
 
 const defaultOptions = {
-  script: "server.js",
+  script: 'server.js',
 };
 
 class ReloadServerPlugin {
@@ -14,7 +14,7 @@ class ReloadServerPlugin {
       exec: path.resolve(process.cwd(), script),
     });
 
-    cluster.on("online", (worker) => {
+    cluster.on('online', (worker) => {
       this.workers.push(worker);
 
       if (this.done) {
@@ -26,13 +26,13 @@ class ReloadServerPlugin {
   apply(compiler) {
     compiler.hooks.afterEmit.tap(
       {
-        name: "reload-server",
+        name: 'reload-server',
       },
       (compilation, callback) => {
         this.done = callback;
         this.workers.forEach((worker) => {
           try {
-            process.kill(worker.process.pid, "SIGTERM");
+            process.kill(worker.process.pid, 'SIGTERM');
           } catch (e) {
             // eslint-disable-next-line
             console.warn(`Unable to kill process #${worker.process.pid}`);
@@ -42,7 +42,7 @@ class ReloadServerPlugin {
         this.workers = [];
 
         cluster.fork();
-      }
+      },
     );
   }
 }

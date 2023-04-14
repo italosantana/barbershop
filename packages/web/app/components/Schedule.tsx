@@ -1,10 +1,9 @@
-import { Box, Typography } from "@mui/material"
-
+import { Box, Typography } from '@mui/material';
 
 export const ScheduleSection = () => {
-    return(
-        <Box>
-            <Typography>a</Typography>
-        </Box>
-    )
-}
+  return (
+    <Box>
+      <Typography>a</Typography>
+    </Box>
+  );
+};
