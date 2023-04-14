@@ -1,39 +1,63 @@
-"""The root of all... queries"""
+"""
+The root of all... queries
+"""
 type Query {
-  """Fetches an object given its ID"""
+  """
+  Fetches an object given its ID
+  """
   node(
-    """The ID of an object"""
+    """
+    The ID of an object
+    """
     id: ID!
   ): Node
 
-  """Fetches objects given their IDs"""
+  """
+  Fetches objects given their IDs
+  """
   nodes(
-    """The IDs of objects"""
+    """
+    The IDs of objects
+    """
     ids: [ID!]!
   ): [Node]!
   me(
-    """Returns the items in the list that come after the specified cursor."""
+    """
+    Returns the items in the list that come after the specified cursor.
+    """
     after: String
 
-    """Returns the first n items from the list."""
+    """
+    Returns the first n items from the list.
+    """
     first: Int
 
-    """Returns the items in the list that come before the specified cursor."""
+    """
+    Returns the items in the list that come before the specified cursor.
+    """
     before: String
 
-    """Returns the last n items from the list."""
+    """
+    Returns the last n items from the list.
+    """
     last: Int
   ): User
 }
 
-"""An object with an ID"""
+"""
+An object with an ID
+"""
 interface Node {
-  """The id of the object."""
+  """
+  The id of the object.
+  """
   id: ID!
 }
 
 type User implements Node {
-  """The ID of an object"""
+  """
+  The ID of an object
+  """
   id: ID!
   name: String!
   email: String!
@@ -49,10 +73,14 @@ type UserRegisterPayload {
   token: String
   me: User
 
-  """Default success field resolver."""
+  """
+  Default success field resolver.
+  """
   success: String
 
-  """Default error field resolver."""
+  """
+  Default error field resolver.
+  """
   error: String
   clientMutationId: String
 }

@@ -3,7 +3,6 @@ import { connectionArgs } from 'graphql-relay';
 import * as UserLoader from './UserLoader';
 import { UserType, UserConnection } from './UserType';
 
-
 import { edgeField } from '../../graphql/edgeField';
 
 export const userTypeField = (key = 'user') => ({
