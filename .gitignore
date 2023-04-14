@@ -19,3 +19,4 @@ yarn-*.log
 
 # Random things
 package-lock.json
+yarn.lock
