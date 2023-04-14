@@ -1,22 +1,10 @@
+build
+dist
+.env
+.env.production
+.env.backup
+node_modules
+.eslintcache
+yarn-error.log*
+
 .DS_Store
-.idea/
-.vscode/
-tmp/
-*.log
-.next
-
-**/node_modules/
-build/
-dist/
-npm-debug.log*
-
-yarn-*.log
-*.tsbuildinfo
-
-# Env files
-.env*
-!.env.example
-
-# Random things
-package-lock.json
-yarn.lock
