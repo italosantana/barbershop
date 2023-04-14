@@ -9,7 +9,6 @@ tmp/
 build/
 dist/
 npm-debug.log*
-.eslintcache
 
 yarn-*.log
 *.tsbuildinfo
