@@ -1,34 +1,51 @@
 {
-    "name": "barbershop",
-    "version": "0.1.0",
-    "private": true,
-    "scripts": {
-        "dev:app": "yarn workspace @barbershop/web dev",
-        "build": "yarn workspace @barbershop/web build",
-        "start:server": "yarn workspace @barbershop/server start",
-        "lint": "yarn workspace @barbershop/web lint"
-    },
-    "workspaces": {
-        "packages": [
-            "packages/*"
-        ]
-    },
-    "dependencies": {
-        "@emotion/react": "^11.10.6",
-        "@emotion/server": "11.4.0",
-        "@emotion/styled": "^11.9.3",
-        "@material-ui/core": "^4.12.4",
-        "@material-ui/icons": "^4.11.3",
-        "@mui/icons-material": "^5.8.4",
-        "@mui/material": "^5.12.0",
-        "@types/node": "18.15.11",
-        "@types/react": "18.0.34",
-        "@types/react-dom": "18.0.11",
-        "eslint": "8.38.0",
-        "eslint-config-next": "13.3.0",
-        "next": "13.3.0",
-        "react": "18.2.0",
-        "react-dom": "18.2.0",
-        "typescript": "5.0.4"
-    }
+  "private": true,
+  "name": "barbershop",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "yarn workspace @barbershop/web build",
+    "dev:app": "yarn workspace @barbershop/web dev",
+    "lint": "yarn workspace @barbershop/web lint",
+    "prepare": "husky install",
+    "prettier:server": "prettier --write apps/server",
+    "prettier:web": "prettier --write apps/application",
+    "start:server": "yarn workspace @barbershop/server start"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/server": "11.4.0",
+    "@emotion/styled": "^11.9.3",
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/icons": "^4.11.3",
+    "@mui/icons-material": "^5.8.4",
+    "@mui/material": "^5.12.0",
+    "@types/node": "18.15.11",
+    "@types/react": "18.0.34",
+    "@types/react-dom": "18.0.11",
+    "eslint": "8.38.0",
+    "eslint-config-next": "13.3.0",
+    "next": "13.3.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "typescript": "5.0.4"
+  },
+  "devDependencies": {
+    "prettier-package-json": "^2.8.0"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": "eslint --cache --fix",
+    "*.{js,ts,tsx,css,md}": "prettier --write",
+    "package.json": "prettier-package-json --write"
+  },
+  "prettier": {
+    "trailingComma": "all",
+    "singleQuote": true,
+    "useTabs": false,
+    "printWidth": 120
+  }
 }
