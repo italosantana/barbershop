@@ -36,7 +36,7 @@ export default mutationWithClientMutationId({
 
     return {
       id: user._id,
-      success: 'User has registered with success!',
+      success: 'Success!',
     };
   },
   outputFields: {
