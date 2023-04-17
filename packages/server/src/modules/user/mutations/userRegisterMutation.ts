@@ -40,13 +40,9 @@ export default mutationWithClientMutationId({
     };
   },
   outputFields: {
-    token: {
-      type: GraphQLString,
-      resolve: ({ token }) => token,
-    },
     me: {
       type: UserType,
-      resolve: async ({ id }) => await UserModel.findOne({ _id: id }),
+      resolve: ({ user }) => user,
     },
     ...successField,
     ...errorField,
